@@ -1,0 +1,35 @@
+<ion-content>
+  <div class="main_content_div">
+    <ion-buttons slot="start" class="back_btn">
+      <ion-back-button class="btn" text="Back" icon="chevron-back-sharp" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <div class="user_div">
+      <div class="user_back">
+        <ion-icon name="person-circle-sharp"></ion-icon>
+      </div>
+      <div class="first_div" *ngIf="currentUser">
+        <span class="username">{{currentUser.Fullname}}</span>
+      </div>
+    </div>
+
+    <div class="content_div">
+
+      <div class="last_div" routerLink="/edit-profile">
+        <ion-label>Edit Profile</ion-label>
+        <ion-icon class="usr" name="chevron-forward-outline"></ion-icon>
+      </div>
+      <div class="last_div" routerLink="/mycargo">
+        <ion-label>My Cargo</ion-label>
+        <ion-icon class="usr" name="chevron-forward-outline"></ion-icon>
+      </div>
+      <div class="last_div" routerLink="/track-cargo">
+        <ion-label>Track Cargo</ion-label>
+        <ion-icon class="usr" name="chevron-forward-outline"></ion-icon>
+      </div>
+      <div class="last_div" (click)="presentAlert()">
+        <ion-label>Log Out</ion-label>
+        <ion-icon class="usr" name="chevron-forward-outline"></ion-icon>
+      </div>
+    </div>
+  </div>
+</ion-content>

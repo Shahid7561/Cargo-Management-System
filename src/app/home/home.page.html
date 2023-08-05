@@ -1,0 +1,98 @@
+
+<ion-header>
+   <ion-toolbar class="bgt">
+     <ion-title>
+       Menu
+     </ion-title>
+     <!--<ion-button slot="start">-->
+
+         <ion-menu-button menu="main-menu" slot="start"></ion-menu-button>
+     <!--</ion-button>-->
+   </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+
+    <ion-grid class="mygrid">
+        <ion-row>
+           <ion-col size="6">
+            <ion-card routerLink="/book-cargo">
+            <ion-item routerLink="/book-cargo">
+              <ion-icon class="iconstyle" name="add-outline"></ion-icon>
+            </ion-item>
+
+            <ion-card-content class="mypra">
+              Book Cargo
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <ion-col size="6">
+          <ion-card>
+          <ion-item routerLink="/mycargo">
+            <ion-icon class="iconstyle" name="calendar-clear-sharp"></ion-icon>
+          </ion-item>
+
+          <ion-card-content class="mypra">
+            My Cargo
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="6">
+           <ion-card routerLink="/track-cargo">
+           <ion-item routerLink="/track-cargo">
+            <ion-icon class="iconstyle" name="location-sharp"></ion-icon>
+           </ion-item>
+
+           <ion-card-content class="mypra">
+             Track Cargo
+           </ion-card-content>
+         </ion-card>
+       </ion-col>
+
+       <ion-col size="6">
+         <ion-card routerLink="/profile">
+         <ion-item routerLink="/profile">
+          <ion-icon class="iconstyle" name="person-sharp"></ion-icon>
+         </ion-item>
+
+         <ion-card-content class="mypra">
+           My Profile
+         </ion-card-content>
+       </ion-card>
+     </ion-col>
+       </ion-row>
+
+       <ion-row>
+        <ion-col size="6">
+         <ion-card routerLink="/contact">
+         <ion-item routerLink="/contact">
+          <ion-icon class="iconstyle" name="call-sharp"></ion-icon>
+         </ion-item>
+
+         <ion-card-content class="mypra">
+           Contact Us
+         </ion-card-content>
+       </ion-card>
+     </ion-col>
+
+     <ion-col size="6">
+       <ion-card routerLink="/about">
+       <ion-item routerLink="/about">
+        <ion-icon class="iconstyle" name="help-circle-sharp"></ion-icon>
+       </ion-item>
+
+       <ion-card-content class="mypra">
+         About Us
+       </ion-card-content>
+     </ion-card>
+   </ion-col>
+     </ion-row>
+
+    </ion-grid>
+</ion-content>

@@ -1,0 +1,52 @@
+<ion-content>
+  <div class="main_content_div">
+   <ion-buttons slot="start" class="back_btn">
+     <ion-back-button class="btn" text="Back" icon="chevron-back-sharp"  defaultHref="home"></ion-back-button>
+   </ion-buttons>
+   <ion-buttons slot="start" class="back_btn2">
+    <ion-button (click)="onSubmit(form)" class="btn">SAVE</ion-button>
+  </ion-buttons>
+
+      <div class="user_div">
+          <div class="user_back">
+           <ion-icon name="person-circle-sharp"></ion-icon>
+          </div>
+
+      </div>
+
+      <div class="content_div">
+        <form [formGroup]="form" (submit)="onSubmit(form)">
+          <ion-item class="myitem">
+            <ion-label class="mylabel" position="stacked">Fullname</ion-label>
+            <ion-input type="text" formControlName="Fullname"></ion-input>
+          </ion-item>
+
+          <ion-item class="myitem">
+            <ion-label class="mylabel" position="stacked">Email</ion-label>
+            <ion-input type="email" formControlName="Email"></ion-input>
+          </ion-item>
+
+          <ion-item class="myitem">
+            <ion-label class="mylabel" class="mylabel" position="stacked">Number</ion-label>
+            <ion-input type="tel" formControlName="Phone"></ion-input>
+          </ion-item>
+
+          <ion-list>
+            <ion-item class="myitem">
+              <ion-label class="mylabel" position="stacked" >Gender</ion-label>
+              <ion-select interface="action-sheet" formControlName="Gender">
+                <ion-select-option value="Male">Male</ion-select-option>
+                <ion-select-option value="Female">Female</ion-select-option>
+                <ion-select-option value="Other">Other</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+
+          <ion-item class="myitem">
+            <ion-label class="mylabel" position="stacked">Date Of Birth</ion-label>
+            <ion-input name="dob" type="date" placeholder="dd/mm/yyyy" formControlName="DOB"></ion-input>
+          </ion-item>
+        </form>
+      </div>
+  </div>
+</ion-content>

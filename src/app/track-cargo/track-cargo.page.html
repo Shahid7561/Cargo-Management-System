@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="tit">Track Page</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button class="btn3" text="Back" icon="chevron-back-sharp"  defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <h1 class="mh">Track Your Cargo</h1>
+
+  <ion-grid [fixed]="true">
+  <ion-row>
+  <ion-input name="Track ID" type="text" placeholder="Enter Tracking ID"></ion-input>
+</ion-row>
+  <ion-row>
+    <ion-col> <ion-button expand="block" shape="round" routerLink="#">Track</ion-button>
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+</ion-grid> -->
+
+<div class="card">
+  <div class="upper">
+      <div class="row">
+          <div class="col-8 heading">
+              <h5 class="f1"><b>Track Your Cargo</b></h5>
+          </div>
+          <div class="col-4">
+              <img class="img-fluid" src="https://i.imgur.com/Rzjor3M.png">
+          </div>
+      </div>
+      <!-- <form [formGroup]="form" (submit)="onSubmit(form)"> -->
+          <div class="form-element">
+              <span id="input-header">Train Number</span>
+              <input type="text"  placeholder="Enter Train Number" [(ngModel)]="train_no">
+          </div>
+      <!-- </form> -->
+
+  </div>
+  <hr>
+  <div class="lower">
+      <!-- <button class="btn" type="submit">Track Order</button> -->
+      <ion-button type="submit" expand="block" shape="round" (click)="onSubmit()">Track</ion-button>
+
+  </div>
+
+
+</div>
+</ion-content>

@@ -1,0 +1,25 @@
+<ion-content class="ion-padding">
+  <h1>Welcome,</h1>
+  <h3>Sign in to Continue!</h3>
+
+  <form [formGroup]="form" (ngSubmit)="login(form)">
+    <ion-item>
+      <ion-input type="text" required formControlName="Email" placeholder="your@gmail.com"><ion-icon
+          name="mail-outline"></ion-icon></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input class="myinput" name="password" [type]="showPassword2 ? 'text' : 'password'" formControlName="Password" placeholder="Password"><ion-icon class="myico1" name="lock-closed-outline"></ion-icon></ion-input>
+      <ion-icon  class="myico2" [name]="passwordToggleIcon2" (click)="togglePassword2()"></ion-icon>
+    </ion-item>
+    <!-- <ion-item>
+      <ion-input type="password" required formControlName="Password" placeholder="password"><ion-icon
+          name="lock-closed-outline"></ion-icon></ion-input>
+    </ion-item> -->
+    <ion-button expand="block" type="submit" shape="round">Login</ion-button>
+    <ion-item>
+      <a routerLink="/change-password" class="forgot-password-link">Forgot Password?</a>
+    </ion-item>
+    <p class="footer-text">I'm new user, <a routerLink="/sign-up">Sign Up</a></p>
+  </form>
+</ion-content>

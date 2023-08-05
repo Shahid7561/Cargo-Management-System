@@ -1,0 +1,146 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="tit">Book Cargo Page</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button class="btn" text="Back" icon="chevron-back-sharp" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <p class="mh">Book Your Cargo Now</p>
+  <form [formGroup]="form" (submit)="onsubmit(form)">
+    <ion-grid [fixed]="true">
+      <ion-row>
+        <ion-col class="mtext">State</ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-select interface="action-sheet" placeholder="Select State" formControlName="State">
+            <ion-select-option *ngFor="let data of agents" value="{{data.State}}">{{data.State}}</ion-select-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col class="mtext">City</ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-select interface="action-sheet" placeholder="Select City" formControlName="City">
+            <ion-select-option *ngFor="let data of agents" value="{{data.City}}">{{data.City}}</ion-select-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col> <ion-button expand="block" shape="round" type="submit">Submit</ion-button>
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+
+  <!-- eslint-disable @angular-eslint/template/eqeqeq -->
+
+  <div class="employees">
+
+    <div class="row mt-4" *ngFor="let data of agents">
+      <div class="col">
+        <div class="container-fluid g-0 p-2 mycss" *ngIf="data.State==state && data.City==city">
+
+
+
+          <div class="row g-0">
+
+            <!-- <div class="col-md-2 d-flex justify-content-center align-items-center">
+              <img src="../../assets/iron2.jpg" alt="Profile Image" class="profile">
+            </div> -->
+
+            <div class="col ps-2">
+
+              <div class="row g-0">
+                <div class="col-md-10 text-center fs-5 fst-italic text-secondary">
+                  <span>Agents Details</span>
+
+                </div>
+
+
+              </div>
+
+              <div class="row g-0 mt-3">
+
+                <div class="col-md">
+
+                  <table class="table table-hover mx-auto">
+                    <!-- <thead class="text-center fs-5 fst-italic text-secondary">
+                                    <tr>
+                                        <td colspan="2">Personal Details</td>
+                                    </tr>
+                                </thead> -->
+                    <tbody>
+                      <tr>
+                        <td class="jis">Name</td>
+                        <td>{{data.fullName}}</td>
+                      </tr>
+                      <tr>
+                        <td class="jis">Phone</td>
+                        <td>{{data.phoneNumber}}</td>
+                      </tr>
+                      <tr>
+                        <td class="jis">State</td>
+                        <td>{{data.State}}</td>
+                      </tr>
+                      <tr>
+                        <td class="jis">Address</td>
+                        <td>{{data.officeAddress}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+
+                <div class="col">
+
+                  <table class="table table-hover mx-auto">
+                    <!-- <thead class="text-center fs-5 fst-italic text-secondary">
+                                    <tr>
+                                        <td colspan="2">Personal Details</td>
+                                    </tr>
+                                </thead> -->
+                    <tbody>
+                      <tr>
+                        <td class="jis">Email</td>
+                        <td>{{data.Email}}</td>
+                      </tr>
+                      <tr>
+                        <td class="jis">Gender</td>
+                        <td>{{data.Gender}}</td>
+                      </tr>
+                      <tr>
+                        <td class="jis">City</td>
+                        <td>{{data.City}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</ion-content>

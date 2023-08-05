@@ -1,0 +1,65 @@
+.mtext {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+ion-grid {
+  margin-top: 40px;
+  text-transform: initial;
+}
+
+ion-button {
+  --box-shadow: none;
+  --box-radius: 50px;
+
+  --background: linear-gradient(90deg,
+      #8e2de2,
+      #2f80ed);
+  height: 45px;
+  font-size: 20px;
+  color: #fff;
+  margin-top: 20px;
+  margin-bottom: 0.5rem;
+  text-transform: initial;
+}
+
+.mh {
+  color: black;
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 35px;
+  text-transform: initial;
+}
+
+.btn {
+  color: #1B6DFF;
+  font-size: 18px;
+}
+
+.tit {
+  padding-left: 25px;
+}
+
+ion-select {
+  --placeholder-color: #2f80ed;
+  --placeholder-opacity: 1;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+ion-select::part(placeholder),
+ion-select::part(text) {
+  flex: 0 0 auto;
+  font-size: 21px;
+}
+
+
+ion-select::part(text) {
+  color: black;
+}
+
+ion-select::part(icon) {
+  color: #2f80ed;
+  opacity: 1;
+}
